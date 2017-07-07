@@ -1,0 +1,119 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://storage.googleapis.com/ics-redball/redball.js"></script>
+    <script> 
+    /* redball */
+    $(document).ready(function(){
+        
+    $(".fadeout").click(function(){
+        $("#red").fadeOut()
+    });
+    
+    $(".fadein").click(function(){
+        $("#red").fadeIn();
+    });
+    
+    $(".up").click(function(){
+        $("#red").animate({"top":"-=50px"},500,"linear")
+    });
+    
+    $(".down").click(function(){
+        $("#red").animate({"top":"+=50px"},500,"linear")
+    });
+    
+    $(".left").click(function(){
+        $("#red").animate({"left":"-=50px"},500,"linear")
+    });
+    
+    $(".right").click(function(){
+        $("#red").animate({"left":"+=50px"},500,"linear")
+    });
+    
+    $(".downright").click(function(){
+        $("#red").animate({"top":"+=50px", "left":"+=50px"},500,"linear")
+    });
+    
+    $(".upright").click(function(){
+        $("#red").animate({"top":"-=50px","left":"+=50px"},500,"linear")
+    });
+    
+    $(".downleft").click(function(){
+        $("#red").animate({"top":"+=50px", "left":"-=50px"},500,"linear")
+    });
+    
+    $(".upleft").click(function(){
+        $("#red").animate({"left":"-=50px","top":"-=50px"},500,"linear")
+    });
+    
+    $(".upleft").click(function(){
+        $("#red").animate({"left":"-=50px","top":"-=50px"},500,"linear")
+    });
+    
+    $(".square").click(function(){
+        $("#red").animate({"left":"+=50px"},500,"linear"),
+        $("#red").animate({"top":"+=50px"},500,"linear"),
+        $("#red").animate({"left":"-=50px"},500,"linear"),
+        $("#red").animate({"top":"-=50px"},500,"linear")
+    });
+    
+    $(".triangle").click(function(){
+        $("#red").animate({"top":"-=50px","left":"+=50px"},500,"linear"),
+        $("#red").animate({"top":"+=50px", "left":"+=50px"},500,"linear"),
+        $("#red").animate({"left":"-=100px"},500,"linear")
+        
+    });
+    
+    $(".octagon").click(function(){
+        $("#red").animate({"left":"+=50px"},500,"linear"),
+        $("#red").animate({"top":"+=50px", "left":"+=50px"},500,"linear"),
+        $("#red").animate({"top":"+=50px"},500,"linear"),
+        $("#red").animate({"top":"+=50px", "left":"-=50px"},500,"linear"),
+        $("#red").animate({"left":"-=50px"},500,"linear"),
+        $("#red").animate({"left":"-=50px","top":"-=50px"},500,"linear"),
+        $("#red").animate({"top":"-=50px"},500,"linear"),
+        $("#red").animate({"top":"-=50px","left":"+=50px"},500,"linear")
+    });
+});
+
+    </script>
+</head>
+<body>
+       <h1>Hi. I am Molly Bam Bam.</h1>
+       
+       <p>Get schwifty</p>
+       
+       <p>ayoooooo</p>
+
+       <!--<img style="position:absolute; top:300px; left:0px, width:0px, height:0px" class="img" src="images/MittensPablo2.png">-->
+       
+       <ol>These are my hobbies:
+           <li>Banjo Playing</li>
+           <li>Comics</li>
+           <li>Cartoons</li>
+       </ol>
+       
+       <!--redball jquery-->
+       <img id="red" style="position:absolute; top:300px; left:0px, width:0px, height:0px" src="images/redball.jpg"></img>
+       
+       <button class="fadeout">Fade out</button>
+       <button class="fadein">Fade in</button>
+       
+       <button class="up">up</button>
+       <button class="down">down</button>
+       <button class="right">right</button>
+       <button class="left">left</button>
+       <button class="downright">down right</button>
+       <button class="downleft">down left</button>
+       <button class="upright">up right</button>
+       <button class="upleft">up left</button>
+       
+       <button class="square">square</button>
+       <button class="triangle">triangle</button>
+       <button class="octagon">octagon</button>
+       
+      <button onclick="alert('Hello');">AYOOOO</button>
+       
+       
+</body>
+</html>

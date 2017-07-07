@@ -1,0 +1,199 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://storage.googleapis.com/ics-redball/redball.js"></script>
+    <script>
+        function moveright(){
+            redball.left=redball.left+10;
+            }
+        
+        function moveleft(){
+            redball.left=redball.left-10;
+            }
+            
+        function moveup(){
+            redball.top=redball.top-10;
+            }
+        
+        function movedown(){
+            redball.top=redball.top+10;
+            }
+            
+        function movedownright(){
+            redball.top=redball.top+10;
+            redball.left=redball.left+10;
+            }
+            
+        function moveupright(){
+            redball.top=redball.top-10;
+            redball.left=redball.left+10;
+            }   
+        function movedownleft(){
+            redball.top=redball.top+10;
+            redball.left=redball.left-10;
+            }    
+        function moveupleft(){
+            redball.top=redball.top-10;
+            redball.left=redball.left-10;
+            }
+            
+        function movetriangle(){
+            i=0;
+            while(i<10){
+            moveupright();
+            i++;
+            }
+            i=0;
+            while(i<10){
+            movedownright();
+            i++;
+            }
+            i=0;
+            while(i<20){
+            moveleft();
+            i++;
+            }
+        }
+
+        function movesquare(){
+            i=0;
+            while(i<10){
+            moveright();
+            i++;
+            }
+            i=0;
+            while(i<10){
+            movedown();
+            i++;
+            }
+            i=0;
+            while(i<10){
+            moveleft();
+            i++;
+            }
+            i=0;
+            while(i<10){
+            moveup();
+            i++;
+            }
+        }
+        function moveoctagon() {
+			i=0;
+            while(i<10){
+            moveupright();
+            i++;
+            }
+			i=0;
+            while(i<10){
+            moveright();
+            i++;
+            }
+			i=0;
+            while(i<10){
+            movedownright();
+            i++;
+            }
+			i=0;
+            while(i<10){
+            movedown();
+            i++;
+            }
+			i=0;
+            while(i<10){
+            movedownleft();
+            i++;
+            }
+			i=0;
+            while(i<10){
+            moveleft();
+            i++;
+            }
+			i=0;
+            while(i<10){
+            moveupleft();
+            i++;
+            }
+			i=0;
+            while(i<10){
+            moveup();
+            i++;
+            }
+        }
+        
+        var angle = 0;
+        var x = 0;
+        var y = 0;
+        var w = (window.innerWidth) / 10;
+        var h = (window.innerHeight) / 5;
+
+        function movecircle() {
+        x = w + w * Math.cos(angle * Math.PI / 180);
+        y = h + h * Math.sin(angle * Math.PI / 180);
+        
+        angle++;
+        if (angle > 360) {
+        angle = 0;
+        }
+        setTimeout(movecircle,20);
+    }
+    
+    
+        function leftwall(){
+        while(redball.left>=0) {
+            redball.left = redball.left-10
+        }
+    }
+    
+        function rightwall(){
+        var w = window.innerWidth;
+        while(redball.left<=w-100) {
+            redball.left = redball.left+10
+        }
+    }
+
+        function topwall(){
+        while(redball.top>=0) {
+            redball.top=redball.top-10;
+        }   
+    }
+        
+        function bottomwall(){
+        var h = window.innerHeight;
+        while(redball.top<=h-100) {
+            redball.top=redball.top+10;    
+        }
+    }
+    
+    function bounce(){
+        var i = 0;
+        for (i=0;i<40;i++) {
+            movedown();
+        }
+    
+        for (i=0;i<40;i++) {
+            moveup();
+        }
+    }
+
+    </script>
+</head>
+<body>
+       <img id="redball"  src="images/redball.jpg"></img>
+       <input type="button" value="right" onclick="moveright()"/>
+       <input type="button" value="left" onclick="moveleft()"/>
+       <input type="button" value="up" onclick="moveup()"/>
+       <input type="button" value="down" onclick="movedown()"/>
+       <input type="button" value="down right" onclick="movedownright()"/>
+       <input type="button" value="down left" onclick="movedownleft()"/>
+       <input type="button" value="up right" onclick="moveupright()"/>
+       <input type="button" value="up left" onclick="moveupleft()"/>
+       <input type="button" value="square" onclick="movesquare()"/>
+       <input type="button" value="triangle" onclick="movetriangle()"/>
+       <input type="button" value="octagon" onclick="moveoctagon()"/>
+       <input type="button" value="circle" onclick="movecircle()"/>
+       <input type="button" value="wall left" onclick="leftwall()"/>
+       <input type="button" value="wall right" onclick="rightwall()"/>
+       <input type="button" value="wall top" onclick="topwall()"/>
+       <input type="button" value="wall bottom" onclick="bottomwall()"/>
+       <input type="button" value="bounce" onclick="bounce()"/>
+</body>
+</html>
